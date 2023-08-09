@@ -1,0 +1,28 @@
+@import "../../../../../styles/colors.scss";
+
+.nav-link,
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1rem;
+  color: $white-color;
+
+  &::first-letter {
+    text-transform: uppercase;
+  }
+}
+
+.navbar-brand {
+  font-size: 2rem;
+}
+
+.logout {
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  background-color: $dark-color;
+
+  & .dropdown-item:hover {
+    background-color: $gray-color;
+  }
+}

@@ -1,0 +1,64 @@
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/">chromium</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbar"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="">strona główna</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="apartamenty">apartamenty</a>
+        </li>
+        <li class="nav-item dropdown" *ngIf="user">
+          <a
+            class="nav-link dropdown-toggle"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            panel sterowania
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a
+                class="dropdown-item nav-link ms-2"
+                routerLink="dodaj_apartament"
+                >dodaj apartament</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item nav-link ms-2" routerLink="klienci"
+                >klienci</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="agencja">agencja</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="kontakt">kontakt</a>
+        </li>
+        <div class="d-flex">
+          <li class="nav-item" *ngIf="!user">
+            <a class="nav-link" routerLink="logowanie">zaloguj się</a>
+          </li>
+          <li class="nav-item" *ngIf="!user">
+            <a class="nav-link" routerLink="rejestracja">zarejestruj się</a>
+          </li>
+        </div>
+        <li class="nav-item" *ngIf="user">
+          <a class="nav-link logout" (click)="logout()">wyloguj się</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

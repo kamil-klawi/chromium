@@ -1,1 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./styles/colors.scss";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  color: $white-color;
+  background-color: $background-color;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+}
+
+mat-form-field {
+  width: 100%;
+}

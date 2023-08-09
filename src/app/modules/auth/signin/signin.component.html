@@ -1,0 +1,82 @@
+<div class="wrapper my-5">
+  <h2 class="heading mb-4">Zaloguj się:</h2>
+  <form [formGroup]="loginForm" (ngSubmit)="onSignin()">
+    <div>
+      <mat-form-field appearance="fill">
+        <mat-label>Nazwa użytkownika</mat-label>
+        <input
+          matInput
+          formControlName="username"
+          [(ngModel)]="userData.username"
+        />
+        <mat-error *ngIf="controls.username.invalid">{{
+          getErrorMessage(controls.username)
+        }}</mat-error>
+      </mat-form-field>
+    </div>
+    <ng-container
+      *ngIf="
+        controls?.['username']?.invalid &&
+        controls?.['username']?.touched &&
+        controls?.['username']?.dirty
+      "
+    >
+      <app-alert
+        *ngIf="controls?.['username']?.errors"
+        [message]="'Ta kontrolka musi mieć od 4 do 30 znaków.'"
+      ></app-alert>
+    </ng-container>
+    <div>
+      <mat-form-field appearance="fill">
+        <mat-label>Hasło</mat-label>
+        <input
+          [type]="hide ? 'password' : 'text'"
+          matInput
+          formControlName="password"
+          [(ngModel)]="userData.password"
+        />
+        <mat-error *ngIf="controls.password.invalid">{{
+          getErrorMessage(controls.password)
+        }}</mat-error>
+        <button
+          (click)="hide = !hide"
+          [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hide"
+          mat-icon-button
+          matSuffix
+        >
+          <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+        </button>
+      </mat-form-field>
+    </div>
+    <ng-container
+      *ngIf="
+        controls?.['password']?.invalid &&
+        (controls?.['password']?.touched || controls?.['password']?.dirty)
+      "
+    >
+      <app-alert
+        *ngIf="controls?.['password']?.errors"
+        [message]="'Ta kontrolka nie może być pusta.'"
+      ></app-alert
+    ></ng-container>
+    <div class="d-flex justify-content-end">
+      <button
+        [disabled]="controls.username.invalid || controls.password.invalid"
+        color="primary"
+        mat-raised-button
+        type="submit"
+        class="form-btn-submit"
+      >
+        Zaloguj się
+      </button>
+    </div>
+    <div>
+      <p class="description my-5">
+        Nie masz jeszcze konta?
+        <a routerLink="/rejestracja">Zarejestruj się!</a>
+      </p>
+    </div>
+    <app-alert *ngIf="errorMessage" [message]="errorMessage"></app-alert>
+  </form>
+</div>
