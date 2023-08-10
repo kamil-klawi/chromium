@@ -1,0 +1,35 @@
+.wrapper {
+  font-weight: 700;
+  font-family: "Manrope", sans-serif;
+
+  .wrapper-content,
+  .wrapper-info,
+  .wrapper-info-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .wrapper-header {
+      font-size: 2rem;
+    }
+
+    .wrapper-subheader {
+      font-size: 1.25rem;
+    }
+  }
+
+  .wrapper-image {
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .wrapper-info-text {
+    justify-content: center;
+  }
+
+  .wrapper-description {
+    font-size: 1.25rem;
+  }
+}

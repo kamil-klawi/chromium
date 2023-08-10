@@ -1,0 +1,18 @@
+@import "../../../styles/variables/colors.scss";
+
+mat-form-field {
+  mat-label,
+  input {
+    font-weight: 700;
+    font-family: "Manrope", sans-serif;
+  }
+}
+
+th,
+td,
+button,
+mat-paginator {
+  font-weight: 700;
+  font-family: "Manrope", sans-serif;
+  color: $dark-color;
+}

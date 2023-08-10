@@ -1,0 +1,49 @@
+<div *ngIf="apartment" class="my-5">
+  <div class="wrapper">
+    <div class="wrapper-content">
+      <h2 class="wrapper-header">//{{ apartment.name }}</h2>
+      <h4 class="wrapper-subheader">{{ apartment.location }}</h4>
+      <h4 class="wrapper-subheader"></h4>
+    </div>
+    <img
+      class="wrapper-image my-5 container"
+      src="{{ apartment.image }}"
+      alt=""
+    />
+    <div class="wrapper-info">
+      <p class="wrapper-info-text">
+        <mat-icon class="material-icons-outlined mx-1">villa</mat-icon>
+        {{ apartment.area }}m<sup>2</sup>
+      </p>
+      <p class="wrapper-info-text">
+        <mat-icon class="material-icons-outlined mx-1">stairs</mat-icon>
+        {{ apartment.floor }}
+      </p>
+      <p class="wrapper-info-text">
+        <mat-icon class="material-icons-outlined mx-1"
+          >monetization_on</mat-icon
+        >
+        {{ apartment.price }}
+      </p>
+    </div>
+    <h4 class="wrapper-description mt-5">{{ apartment.name }}</h4>
+  </div>
+  <!-- <div>
+    <p>Usuń apartament</p>
+    <button mat-raised-button color="warn" (click)="openDeleteDialog()">
+      Usuń
+    </button>
+  </div>
+  <div>
+    <p>Edytuj apartament</p>
+    <button mat-raised-button color="primary" (click)="openEditDialog()">
+      Edytuj
+    </button>
+  </div>
+  <p>Dane apartamentu:</p>
+  <p>{{ apartment.name }}</p>
+  <p>{{ apartment.location }}</p>
+  <p>{{ apartment.area }}</p>
+  <p>{{ apartment.floor }}</p>
+  <p>{{ apartment.price }}</p> -->
+</div>

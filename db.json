@@ -7,14 +7,51 @@
       "id": 1
     }
   ],
-  "clients": [
+  "apartments": [
     {
       "id": 1,
       "name": "Test",
       "location": "Testowy",
+      "image": "https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?cs=srgb&dl=pexels-pixabay-36717.jpg&fm=jpg",
       "area": "25",
       "floor": "2",
+      "price": "3000"
+    },
+    {
+      "id": 2,
+      "name": "Test",
+      "location": "Testowy",
+      "image": "https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?cs=srgb&dl=pexels-pixabay-36717.jpg&fm=jpg",
+      "area": "32",
+      "floor": "3",
+      "price": "2500"
+    },
+    {
+      "id": 3,
+      "name": "Test",
+      "location": "Testowy",
+      "image": "https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?cs=srgb&dl=pexels-pixabay-36717.jpg&fm=jpg",
+      "area": "48",
+      "floor": "1",
+      "price": "5000"
+    },
+    {
+      "id": 4,
+      "name": "Test",
+      "location": "Testowy",
+      "image": "https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?cs=srgb&dl=pexels-pixabay-36717.jpg&fm=jpg",
+      "area": "20",
+      "floor": "7",
       "price": "1000"
+    },
+    {
+      "name": "Petrylium",
+      "location": "Belgium",
+      "image": "https://cdn.wallpapersafari.com/97/70/w37ZCY.jpg",
+      "area": "100",
+      "floor": "0",
+      "price": "10000",
+      "id": 5
     }
   ]
 }

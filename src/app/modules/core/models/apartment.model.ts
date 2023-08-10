@@ -1,35 +1,38 @@
 import { FormControl } from '@angular/forms';
 
-export interface ApartamentResponse {
+export interface ApartmentResponse {
   id: number;
   name: string;
   location: string;
+  image: string;
   area: string;
   floor: string;
   price: string;
 }
 
-export type PostApartament = Omit<ApartamentResponse, 'id'>;
+export type PostApartment = Omit<ApartmentResponse, 'id'>;
 
-export class Apartament implements ApartamentResponse {
+export class Apartment implements ApartmentResponse {
   constructor(
     public id: number,
     public name: string,
     public location: string,
+    public image: string,
     public area: string,
     public floor: string,
     public price: string,
   ) {}
 }
 
-export interface GetApartamentsResponse {
-  clients: Apartament[];
+export interface GetApartmentsResponse {
+  apartments: Apartment[];
   totalCount: number;
 }
 
-export interface PostApartamentForm {
+export interface PostApartmentForm {
   name: FormControl<string>;
   location: FormControl<string>;
+  image: FormControl<string>;
   area: FormControl<string>;
   floor: FormControl<string>;
   price: FormControl<string>;

@@ -1,0 +1,8 @@
+<h1 mat-dialog-title>Edytuj apartament</h1>
+<div mat-dialog-content>
+  <app-apartment-form
+    [apartment]="data.apartment"
+    [editMode]="true"
+    (closeDialog)="closeEditDialog()"
+  ></app-apartment-form>
+</div>
