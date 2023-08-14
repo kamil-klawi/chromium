@@ -2,7 +2,10 @@
   <div class="wrapper">
     <div class="wrapper-content">
       <h2 class="wrapper-header">//{{ apartment.name }}</h2>
-      <h4 class="wrapper-subheader">{{ apartment.location }}</h4>
+      <h4 class="wrapper-subheader d-flex justify-content-center">
+        <mat-icon class="material-icons-outlined me-1">location_on</mat-icon>
+        {{ apartment.location }}
+      </h4>
       <h4 class="wrapper-subheader"></h4>
     </div>
     <img
@@ -17,33 +20,43 @@
       </p>
       <p class="wrapper-info-text">
         <mat-icon class="material-icons-outlined mx-1">stairs</mat-icon>
-        {{ apartment.floor }}
+        {{ apartment.floor }} piętro
       </p>
       <p class="wrapper-info-text">
-        <mat-icon class="material-icons-outlined mx-1"
-          >monetization_on</mat-icon
-        >
-        {{ apartment.price }}
+        <mat-icon class="material-icons-outlined mx-1">paid</mat-icon>
+        {{ apartment.price | currency: 'PLN' }}
       </p>
+      <div class="d-flex justify-content-center">
+        <mat-icon class="material-icons-outlined mx-2">wifi</mat-icon>
+        <p>Wifi</p>
+        <mat-icon class="material-icons-outlined mx-2">pool</mat-icon>
+        <p>Basen</p>
+        <mat-icon class="material-icons-outlined mx-2">fitness_center</mat-icon>
+        <p>Siłownia</p>
+        <mat-icon class="material-icons-outlined mx-2">sports_bar</mat-icon>
+        <p>Bar</p>
+        <mat-icon class="material-icons-outlined mx-2"
+          >restaurant_menu</mat-icon
+        >
+        <p>Reustaracja</p>
+        <mat-icon class="material-icons-outlined mx-2">shower</mat-icon>
+        <p>Łazienka</p>
+      </div>
     </div>
     <h4 class="wrapper-description mt-5">{{ apartment.name }}</h4>
+    <div class="d-flex justify-content-start" *ngIf="user">
+      <div class="me-3">
+        <p>Usuń apartament</p>
+        <button mat-raised-button color="warn" (click)="openDeleteDialog()">
+          Usuń
+        </button>
+      </div>
+      <div>
+        <p>Edytuj apartament</p>
+        <button mat-raised-button color="primary" (click)="openEditDialog()">
+          Edytuj
+        </button>
+      </div>
+    </div>
   </div>
-  <!-- <div>
-    <p>Usuń apartament</p>
-    <button mat-raised-button color="warn" (click)="openDeleteDialog()">
-      Usuń
-    </button>
-  </div>
-  <div>
-    <p>Edytuj apartament</p>
-    <button mat-raised-button color="primary" (click)="openEditDialog()">
-      Edytuj
-    </button>
-  </div>
-  <p>Dane apartamentu:</p>
-  <p>{{ apartment.name }}</p>
-  <p>{{ apartment.location }}</p>
-  <p>{{ apartment.area }}</p>
-  <p>{{ apartment.floor }}</p>
-  <p>{{ apartment.price }}</p> -->
 </div>
