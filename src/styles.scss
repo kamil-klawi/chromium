@@ -1,4 +1,4 @@
-@import "./styles/variables/colors.scss";
+@import './styles/variables/colors.scss';
 
 *,
 *::before,
@@ -12,11 +12,11 @@ html,
 body {
   height: 100%;
   color: $white-color;
-  background-color: $background-color;
+  background-color: $dark-color;
 }
 
 body {
-  font-family: "Manrope", sans-serif;
+  font-family: 'Manrope', sans-serif;
 }
 
 mat-form-field {

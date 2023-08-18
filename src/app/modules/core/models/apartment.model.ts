@@ -8,6 +8,7 @@ export interface ApartmentResponse {
   area: string;
   floor: string;
   price: string;
+  description: string;
 }
 
 export type PostApartment = Omit<ApartmentResponse, 'id'>;
@@ -21,6 +22,7 @@ export class Apartment implements ApartmentResponse {
     public area: string,
     public floor: string,
     public price: string,
+    public description: string,
   ) {}
 }
 
@@ -36,4 +38,5 @@ export interface PostApartmentForm {
   area: FormControl<string>;
   floor: FormControl<string>;
   price: FormControl<string>;
+  description: FormControl<string>;
 }

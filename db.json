@@ -5,44 +5,24 @@
       "username": "test",
       "password": "123",
       "id": 1
+    },
+    {
+      "email": "test@gmail.com",
+      "username": "test2",
+      "password": "1234",
+      "id": 2
     }
   ],
   "apartments": [
     {
-      "id": 3,
-      "name": "Test",
-      "location": "Testowy",
-      "image": "https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?cs=srgb&dl=pexels-pixabay-36717.jpg&fm=jpg",
-      "area": "48",
-      "floor": "1",
-      "price": "5000"
-    },
-    {
-      "id": 4,
-      "name": "Test",
-      "location": "Testowy",
-      "image": "https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?cs=srgb&dl=pexels-pixabay-36717.jpg&fm=jpg",
-      "area": "20",
-      "floor": "7",
-      "price": "1000"
-    },
-    {
-      "name": "Petrylium",
-      "location": "Belgium",
-      "image": "https://cdn.wallpapersafari.com/97/70/w37ZCY.jpg",
-      "area": "100",
+      "name": "Poseidon",
+      "location": "Hiszpania, Barcelona",
+      "image": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/314234927.jpg?k=21291418450e2c1802e02864677b7cf811321797b1d36aaa55e1019133f82698&o=&hp=1",
+      "area": "500",
       "floor": "0",
-      "price": "10000",
-      "id": 5
-    },
-    {
-      "name": "New America",
-      "location": "Ameryka",
-      "image": "https://image1.apartmentfinder.com/i2/QWpMhp0TT3oR-8RUFzPMSH3zmm1diQOmxaOWsxHSX4Y/110/image.jpg",
-      "area": "35",
-      "floor": "2",
-      "price": "7500",
-      "id": 6
+      "price": "50000",
+      "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
+      "id": 2
     }
   ]
 }

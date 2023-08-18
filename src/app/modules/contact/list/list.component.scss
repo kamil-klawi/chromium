@@ -1,0 +1,31 @@
+@import 'src/styles/variables/colors.scss';
+
+.wrapper-list {
+  display: inline;
+
+  .wrapper-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    list-style: none;
+    font-weight: 700;
+    font-family: 'Manrope', sans-serif;
+
+    a {
+      text-decoration: none;
+
+      svg {
+        height: 1.75rem;
+        fill: $white-color;
+        cursor: pointer;
+      }
+    }
+
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3) {
+      border-bottom: 0.15rem solid $white-color;
+    }
+  }
+}

@@ -24,7 +24,7 @@
       </p>
       <p class="wrapper-info-text">
         <mat-icon class="material-icons-outlined mx-1">paid</mat-icon>
-        {{ apartment.price | currency: 'PLN' }}
+        {{ apartment.price | currency: 'PLN' }} / mies
       </p>
       <div class="d-flex justify-content-center">
         <mat-icon class="material-icons-outlined mx-2">wifi</mat-icon>
@@ -43,9 +43,9 @@
         <p>Łazienka</p>
       </div>
     </div>
-    <h4 class="wrapper-description mt-5">{{ apartment.name }}</h4>
-    <div class="d-flex justify-content-start" *ngIf="user">
-      <div class="me-3">
+    <h4 class="wrapper-description my-5">{{ apartment.description }}</h4>
+    <div class="d-flex justify-content-start wrapper-card" *ngIf="user">
+      <div class="me-4">
         <p>Usuń apartament</p>
         <button mat-raised-button color="warn" (click)="openDeleteDialog()">
           Usuń

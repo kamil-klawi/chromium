@@ -1,9 +1,11 @@
-<div class="client-form-wrapper mt-3">
-  <h2 *ngIf="editMode">Dodaj apartament</h2>
+<div class="apartment-form-wrapper mt-3">
+  <h2 class="mt-3 mb-4">
+    {{ editMode ? 'Edytuj apartament' : 'Dodaj apartament' }}
+  </h2>
   <form [formGroup]="apartmentForm" (ngSubmit)="onAddApartment()">
     <div>
       <mat-form-field appearance="fill">
-        <mat-label>nazwa budynku</mat-label>
+        <mat-label>Nazwa budynku</mat-label>
         <input matInput formControlName="name" />
         <mat-error *ngIf="controls.name.invalid">{{
           getErrorMessage(controls.name)
@@ -12,7 +14,7 @@
     </div>
     <div>
       <mat-form-field appearance="fill">
-        <mat-label>lokacja budynku</mat-label>
+        <mat-label>Lokalizacja budynku</mat-label>
         <input matInput formControlName="location" />
         <mat-error *ngIf="controls.location.invalid">{{
           getErrorMessage(controls.location)
@@ -21,7 +23,7 @@
     </div>
     <div>
       <mat-form-field appearance="fill">
-        <mat-label>zdjęcie budynku</mat-label>
+        <mat-label>Zdjęcie budynku</mat-label>
         <input
           matInput
           formControlName="image"
@@ -34,7 +36,7 @@
     </div>
     <div>
       <mat-form-field appearance="fill">
-        <mat-label>powierzchnia (m<sup>2</sup>)</mat-label>
+        <mat-label>Powierzchnia (m<sup>2</sup>)</mat-label>
         <input matInput formControlName="area" placeholder="" />
         <mat-error *ngIf="controls.area.invalid">{{
           getErrorMessage(controls.area)
@@ -43,7 +45,7 @@
     </div>
     <div>
       <mat-form-field appearance="fill">
-        <mat-label>piętro</mat-label>
+        <mat-label>Piętro</mat-label>
         <input matInput formControlName="floor" />
         <mat-error *ngIf="controls.floor.invalid">{{
           getErrorMessage(controls.floor)
@@ -52,10 +54,19 @@
     </div>
     <div>
       <mat-form-field appearance="fill">
-        <mat-label>cena (PLN)</mat-label>
+        <mat-label>Cena (PLN)</mat-label>
         <input matInput formControlName="price" />
         <mat-error *ngIf="controls.price.invalid">{{
           getErrorMessage(controls.price)
+        }}</mat-error>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="fill">
+        <mat-label>Opis</mat-label>
+        <input matInput formControlName="description" />
+        <mat-error *ngIf="controls.description.invalid">{{
+          getErrorMessage(controls.description)
         }}</mat-error>
       </mat-form-field>
     </div>

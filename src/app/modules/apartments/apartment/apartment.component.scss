@@ -1,6 +1,8 @@
+@import 'src/styles/variables/colors.scss';
+
 .wrapper {
   font-weight: 700;
-  font-family: "Manrope", sans-serif;
+  font-family: 'Manrope', sans-serif;
 
   .wrapper-content,
   .wrapper-info,
@@ -31,5 +33,19 @@
 
   .wrapper-description {
     font-size: 1.25rem;
+    text-align: justify;
+    line-height: calc(1.25rem * 1.5);
+  }
+
+  .wrapper-card {
+    border-radius: 0.5rem;
+    background-color: darken($dark-color, 2);
+    padding: 2rem;
+    width: 29%;
+
+    button {
+      font-weight: 700;
+      font-family: 'Manrope', sans-serif;
+    }
   }
 }

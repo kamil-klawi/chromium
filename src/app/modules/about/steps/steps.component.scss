@@ -1,0 +1,24 @@
+@import 'src/styles/variables/colors.scss';
+
+.tabs {
+  margin-top: 8rem;
+
+  .wrapper-subheader {
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: 'Manrope', sans-serif;
+  }
+
+  mat-tab-group {
+    background-color: $purple-color;
+    color: $white-color;
+    font-weight: 700;
+    font-family: 'Manrope', sans-serif;
+    padding: 1rem;
+
+    mat-tab {
+      font-weight: 700;
+      font-family: 'Manrope', sans-serif;
+    }
+  }
+}

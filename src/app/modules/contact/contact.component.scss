@@ -1,0 +1,17 @@
+@import 'src/styles/variables/colors.scss';
+
+.wrapper {
+  margin: 4rem 0;
+
+  .wrapper-header {
+    font-size: 3rem;
+    font-weight: 700;
+    font-family: 'Manrope', sans-serif;
+  }
+
+  .wrapper-subheader {
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: 'Manrope', sans-serif;
+  }
+}

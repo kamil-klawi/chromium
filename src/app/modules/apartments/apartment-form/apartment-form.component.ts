@@ -75,6 +75,13 @@ export class ApartmentFormComponent implements OnInit {
         nonNullable: true,
         validators: [Validators.required],
       }),
+      description: new FormControl(
+        this.editMode ? this.apartment.description : '',
+        {
+          nonNullable: true,
+          validators: [Validators.required],
+        },
+      ),
     });
   }
 

@@ -46,8 +46,17 @@ export class ApartmentsService {
         map((response) => {
           if (!response.body) return { apartments: [], totalCount: 0 };
           const apartmentArray: Apartment[] = response.body.map(
-            ({ id, name, location, image, area, floor, price }) =>
-              new Apartment(id, name, location, image, area, floor, price),
+            ({ id, name, location, image, area, floor, price, description }) =>
+              new Apartment(
+                id,
+                name,
+                location,
+                image,
+                area,
+                floor,
+                price,
+                description,
+              ),
           );
 
           const totalCount = Number(response.headers.get('X-Total-Count'));
@@ -62,8 +71,17 @@ export class ApartmentsService {
       .get<ApartmentResponse>(`${this.apiUrl}/apartments/${id}`)
       .pipe(
         map(
-          ({ id, name, location, image, area, floor, price }) =>
-            new Apartment(id, name, location, image, area, floor, price),
+          ({ id, name, location, image, area, floor, price, description }) =>
+            new Apartment(
+              id,
+              name,
+              location,
+              image,
+              area,
+              floor,
+              price,
+              description,
+            ),
         ),
       );
   }
@@ -73,8 +91,17 @@ export class ApartmentsService {
       .post<ApartmentResponse>(`${this.apiUrl}/apartments`, apartmentData)
       .pipe(
         map(
-          ({ id, name, location, image, area, floor, price }) =>
-            new Apartment(id, name, location, image, area, floor, price),
+          ({ id, name, location, image, area, floor, price, description }) =>
+            new Apartment(
+              id,
+              name,
+              location,
+              image,
+              area,
+              floor,
+              price,
+              description,
+            ),
         ),
       );
   }
@@ -93,8 +120,17 @@ export class ApartmentsService {
       .put<ApartmentResponse>(`${this.apiUrl}/apartments/${id}`, apartmentData)
       .pipe(
         map(
-          ({ id, name, location, image, area, floor, price }) =>
-            new Apartment(id, name, location, image, area, floor, price),
+          ({ id, name, location, image, area, floor, price, description }) =>
+            new Apartment(
+              id,
+              name,
+              location,
+              image,
+              area,
+              floor,
+              price,
+              description,
+            ),
         ),
       );
   }

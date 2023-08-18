@@ -14,6 +14,16 @@ const routes: Routes = [
         (m) => m.ApartamentsModule,
       ),
   },
+  {
+    path: 'agencja',
+    loadChildren: () =>
+      import('./modules/about/about.module').then((m) => m.AboutModule),
+  },
+  {
+    path: 'kontakt',
+    loadChildren: () =>
+      import('./modules/contact/contact.module').then((m) => m.ContactModule),
+  },
 ];
 
 @NgModule({

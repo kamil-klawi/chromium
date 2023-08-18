@@ -14,6 +14,7 @@ import { MatSort } from '@angular/material/sort';
 import { MatPaginator } from '@angular/material/paginator';
 import { Apartment } from '../core/models/apartment.model';
 import { ApartmentsService } from '../core/services/apartments.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-apartments',
@@ -34,11 +35,19 @@ export class ApartmentsComponent implements AfterViewInit, OnDestroy {
   totalCount = 0;
   filterValue = new FormControl('', { nonNullable: true });
   sub = new Subscription();
+  apartment!: Apartment;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
-  constructor(private apartmentService: ApartmentsService) {}
+  constructor(
+    private apartmentsService: ApartmentsService,
+    private route: Router,
+  ) {}
+
+  get currentUrl() {
+    return this.route.url;
+  }
 
   ngAfterViewInit(): void {
     this.sort.sortChange.subscribe(() => (this.paginator.pageIndex = 0));
@@ -52,7 +61,7 @@ export class ApartmentsComponent implements AfterViewInit, OnDestroy {
             const itemsPerPage = this.paginator.pageSize;
             const sortDirection = this.sort.direction;
             const sortColumnName = this.sort.active;
-            return this.apartmentService.getApartments(
+            return this.apartmentsService.getApartments(
               pageIndex,
               itemsPerPage,
               sortDirection,
@@ -85,7 +94,7 @@ export class ApartmentsComponent implements AfterViewInit, OnDestroy {
     const sortDirection = this.sort.direction;
     const sortColumnName = this.sort.active;
 
-    this.apartmentService
+    this.apartmentsService
       .getApartments(
         pageIndex,
         itemsPerPage,

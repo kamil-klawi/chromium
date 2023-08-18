@@ -1,4 +1,11 @@
-.client-form-wrapper {
+.apartment-form-wrapper {
   max-width: 600px;
   margin: 0 auto;
+
+  mat-label,
+  input,
+  button {
+    font-weight: 700;
+    font-family: 'Manrope', sans-serif;
+  }
 }

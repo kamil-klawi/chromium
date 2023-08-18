@@ -1,4 +1,4 @@
-@import "../../../../styles/variables/colors.scss";
+@import '../../../../styles/variables/colors.scss';
 
 .wrapper {
   max-width: 600px;
@@ -6,12 +6,12 @@
 
   .heading {
     font-weight: 700;
-    font-family: "Manrope", sans-serif;
+    font-family: 'Manrope', sans-serif;
   }
 
   mat-label {
     font-weight: 700;
-    font-family: "Manrope", sans-serif;
+    font-family: 'Manrope', sans-serif;
   }
 
   mat-icon {
@@ -22,17 +22,17 @@
     width: 180px;
     height: 48px;
     font-weight: 700;
-    font-family: "Manrope", sans-serif;
-    background-color: $dark-color;
+    font-family: 'Manrope', sans-serif;
+    background-color: $purple-color;
   }
 
   .description {
     color: $white-color;
     font-weight: 700;
-    font-family: "Manrope", sans-serif;
+    font-family: 'Manrope', sans-serif;
 
     a {
-      color: $dark-color;
+      color: $purple-color;
       text-decoration: none;
     }
   }

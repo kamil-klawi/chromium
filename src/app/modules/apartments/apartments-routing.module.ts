@@ -16,11 +16,6 @@ const routes: Routes = [
     canActivate: [AuthActivateGuard],
   },
   {
-    path: 'usun',
-    component: ApartmentsComponent,
-    canActivate: [AuthActivateGuard],
-  },
-  {
     path: ':id',
     component: ApartmentComponent,
   },

@@ -1,0 +1,51 @@
+@import 'src/styles/variables/colors.scss';
+
+.wrapper {
+  margin: 4rem 0 8rem;
+
+  .wrapper-image {
+    height: 80dvh;
+    background-image: url('https://free4kwallpapers.com/uploads/originals/2022/04/20/rubiks-cube-digital-art-wallpaper.jpg');
+    background-size: cover;
+    background-position: center;
+    background-color: $dark-color;
+    background-repeat: no-repeat;
+  }
+
+  .wrapper-header {
+    margin: 4rem 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-weight: 700;
+    font-family: 'Manrope', sans-serif;
+
+    h1 {
+      width: 600px;
+      text-align: justify;
+    }
+
+    .header-content {
+      display: block;
+      position: relative;
+
+      .header-text {
+        width: 550px;
+        text-align: justify;
+      }
+
+      .header-button {
+        width: 30%;
+        cursor: pointer;
+        background-color: $purple-color;
+        padding: 0.65rem;
+        text-align: center;
+        border-radius: 2rem;
+
+        &::first-letter {
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
